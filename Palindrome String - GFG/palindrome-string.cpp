@@ -13,15 +13,19 @@ public:
 	int isPalindrome(string S)
 	{
 	    // Your code goes here
-	    int j=S.size()-1;
-	    
-	    for(int i=0;i<S.size()/2;i++)
+	    int r=S.size()-1;
+	    int l=0;
+	    while(l<=r)
 	    {
-	        if(S[i]==S[j])
-	        j--;
-	        else
+	        if(S[l] !=S[r])
 	        return 0;
+	        
+	        l++;
+	        r--;
+	        
+	        
 	    }
+	    
 	    return 1;
 	}
 
