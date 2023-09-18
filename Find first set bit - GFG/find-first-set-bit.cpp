@@ -14,9 +14,11 @@ class Solution
     public:
     //Function to find position of first set bit in the given number.
     unsigned int getFirstSetBit(int n)
-    {
-        if(n<2)
-        return n;
+    { 
+        if(n==0)
+        return 0;
+        if(n==1)
+        return 1;
         
         if(n%2==1)
         return 1;
@@ -24,10 +26,9 @@ class Solution
         int cnt=1;
         while(n%2==0)
         {
-           cnt++;
-           n=n>>1;
+            cnt++;
+            n=n>>1;
         }
-        
         return cnt;
     }
 };
